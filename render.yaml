@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bharat-alpha
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bharat_alpha_live_server.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
